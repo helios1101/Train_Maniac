@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Train Maniac</title>
+<meta name="description" content="Railway Search ApI">
+<meta name="author" content="SHA:{508}">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="jquery.mb.YTPlayer.min.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+  
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: yellowgreen; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: limegreen; 
+}
+</style>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="home" class="fs-video-hero">
+  <div id="fs-video-one-bg" class="player" 
+               data-property="{videoURL:'http://youtu.be/Scxs7L0vhZ4',containment:'.fs-video-hero',autoPlay:true, mute:true, startAt:71, stopAt:300, opacity:1}">
+          </div>
+        </div>
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top">Train Maniac</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#restaurant-menu" class="page-scroll">PNR Inquiry</a></li>
+        <li><a href="#portfolio" class="page-scroll">Trains Between Stations</a></li>
+        <li><a href="#team" class="page-scroll">Live Status</a></li>
+        <li><a href="#call-reservation" class="page-scroll">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+</nav>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+            <h1>Rail Track</h1>
+            <p>Always At Your Service </p>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Start Exploring</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 ">
+        <div class="about-img"><img src="img/about.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h2>History</h2>
+          <hr>
+          <p>Indian Railways (IR) is India's national railway system operated by the Ministry of Railways. It manages the fourth-largest railway network in the world by size, with 121,407 kilometres (75,439 mi) of total track over a 67,368-kilometre (41,861 mi) route. Forty nine percent of the routes are electrified with 25 KV AC electric traction while thirty three percent of them are double or multi-tracked.</p>
+          <h3>Services</h3>
+          <p>From December 2017, stations are categorised into the Non-Suburban Group NSG1 to NSG6, the Suburban Group SG1 to SG3, and the Halt Group HG1 to HG3 based on the earnings, passenger footfall and strategic importance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Restaurant Menu Section -->
+<div id="restaurant-menu">
+  <div class="section-title text-center center">
+    <div class="overlay">
+      <h2>Railway PNR InQuiry</h2>
+      <hr>
+
+      <input type="text" placeholder="PNR Code" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <br>
+      <br>
+      <p>This can be found in your ticket. Also a 10 digit number, which is alloted when u have your ticket.</p>
+      <br>
+      <!-- Modal starts -->
+    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success">Open Animated Modal</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
+    <!-- Modals ends -->
+    </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <h2> Station Search... </h2>
+    <div class="row">
+      <div  class="col-xs-12 col-sm-6">
+        <div class="menu-section hey">
+          <h2 class="menu-section-title">Breakfast & Starters</h2>
+          <hr>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $35 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Main Course</h2>
+          <hr>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $45 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Dinner</h2>
+          <hr>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $45 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $350 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Coffee & Drinks</h2>
+          <hr>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $35 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Delicious Dish </div>
+            <div class="menu-item-price"> $30 </div>
+            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+<!-- Dispay trains -->
+<style>
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 800px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 900px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+td:last-child {
+  border-right: 0px;
+}
+th.text-left {
+  text-align: left;
+  text-color: red; 
+}
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+td.text-center {
+  text-align: center;
+}
+td.text-right {
+  text-align: right;
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 30%;
+}
+</style>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="section-title text-center center">
+    <div class="overlay">
+      <h2>Trains Between Stations</h2>
+      <hr>
+      <p>Enter the source from where u want to board the train. The destination will be your last stop.</p>
+      <input type="text" placeholder="Source" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+  <input type="text" placeholder="Destination" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+  <br>
+  <br>
+  <input type="date" placeholder="Date" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <br>
+      <br>
+      <button class="w3 w3-btn btn-warning" onclick="funf()">Click Meeee</button>
+<div id="classModal" class="modal fade bs-example-modal-lg" tabindex="-1"
+    role="dialog" aria-labelledby="classInfo" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              ×
+            </button>
+            <h4 class="modal-title" id="classModalLabel">
+              Class Info
+            </h4>
+          </div>
+          <div class="modal-body">
+            <table id="classTable" class="table table-bordered">
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+<td class="text-left">Windows Vista</td>
+<td class="text-center">Não</td>
+<td class="text-center">Não</td>  
+<td class="text-incompativel">Incompatível</td>    
+</tr>
+<tr>
+<td class="text-left">Windows Vista</td>
+<td class="text-center">Não</td>
+<td class="text-center">Não</td>  
+<td class="text-incompativel">Incompatível</td>    
+</tr>
+<tr>
+<td class="text-left">Windows Vista</td>
+<td class="text-center">Não</td>
+<td class="text-center">Não</td>  
+<td class="text-incompativel">Incompatível</td>    
+</tr>
+<tr>
+<td class="text-left">Windows Vista</td>
+<td class="text-center">Não</td>
+<td class="text-center">Não</td>  
+<td class="text-incompativel">Incompatível</td>    
+</tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="row">
+      <div class="categories">
+        <ul class="cat">
+          <li>
+            <ol class="type">
+              <li><a href="#" data-filter="*" class="active">All</a></li>
+              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
+              <li><a href="#" data-filter=".lunch">Lunch</a></li>
+              <li><a href="#" data-filter=".dinner">Dinner</a></li>
+            </ol>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Dish Name</h4>
+              </div>
+              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Team Section -->
+<style>
+    #map{
+      height: 500px;
+      width:100%;
+    }
+  </style>
+<div id="team" class="text-center">
+  <div class="overlay">
+    <div class="container">
+      <h2>Know Your Trains Much Better</h2>
+      <center>
+      <hr style="align-self: center;background:green; ">
+      </center>
+    <h3> Enter Train number : 
+      <input type="text" placeholder="Enter number" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+        <br>
+      <br>
+      <h3> Enter Date: 
+  <input type="date" placeholder="Date" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <button class="btn btn-primary">Get status </button>
+      <br>
+      <br>
+      <br>
+      <!-- <div class="col-md-10 col-md-offset-1 section-title"> -->
+        <!-- <h2></h2> -->
+        <!-- <hr> -->
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p> -->
+      <!-- </div> -->
+      <!-- <div id="row">
+        <div class="col-md-4 team">
+          <div class="thumbnail">
+            <div class="team-img"><img src="img/team/01.jpg" alt="..."></div>
+            <div class="caption">
+              <h3>Mike Doe</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 team">
+          <div class="thumbnail">
+            <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
+            <div class="caption">
+              <h3>Chris Doe</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 team">
+          <div class="thumbnail">
+            <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
+            <div class="caption">
+              <h3>Ethan Doe</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div id="map">
+      hello
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Call Reservation Section -->
+<div id="call-reservation" class="text-center">
+  <div class="container">
+    <h2>Want to make a reservation? Call <strong>1-887-654-3210</strong></h2>
+  </div>
+</div>
+<!-- Contact Section -->
+<!-- <div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Contact Form</h2>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+<!-- <div id="footer">
+  <div class="container text-center">
+    <div class="col-md-4">
+      <h3>Address</h3>
+      <div class="contact-item">
+        <p>4321 California St,</p>
+        <p>San Francisco, CA 12345</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Opening Hours</h3>
+      <div class="contact-item">
+        <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
+        <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Contact Info</h3>
+      <div class="contact-item">
+        <p>Phone: +1 123 456 1234</p>
+        <p>Email: info@company.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center copyrights">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="social">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+      <p>&copy; 2016 Touché. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+    </div>
+  </div>
+</div> -->
+<style type="text/css">
+.last{
+  height:10px;
+  }
+  .footer-note {
+    margin: auto;
+    /*width: 500px;*/
+    border-top: 1px solid #CACACA;
+    padding-top: 30px;
+    text-align: center;
+  }
+</style>
+<!--- Footer Starts Here ---->
+  <div class="last">
+    <div class="container">
+      <p class="copyright">
+      <div class="footer-note">
+      Designed and built with <i class="fa fa-heart faa-pulse animated"></i> by &copy; Team SHA:{508}</a>
+      </div>
+    </div>
+  </footer>
+  <!--- Footer Ends Here ---->
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+  // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function funf(){
+  $('#classModal').modal('show')
+}
+
+// Rashi code 
+// Initialize and add the map
+var uluru = {lat: 28.6315, lng: 77.2167};
+function initMap() {
+  // The location of Uluru
+  //var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    uluru.lat=latitude;
+    uluru.lng=longitude;
+    initMap();
+
+  }
+
+  function error() {
+     alert( "Unable to retrieve your location");
+  }
+navigator.geolocation.getCurrentPosition(success, error) ;
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOdGyn1yjT9B6v85YX9RqyZCzNKdOkR4U&callback=initMap"
+  type="text/javascript"></script>
+</body>
+</html>
