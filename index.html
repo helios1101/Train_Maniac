@@ -6,6 +6,7 @@
 <title>Train Maniac</title>
 <meta name="description" content="Railway Search ApI">
 <meta name="author" content="SHA:{508}">
+<link rel="icon" type="image/png" href="img/download.png">
 
 <!-- Favicons
     ================================================== -->
@@ -35,8 +36,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- LOader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+</script>
+    
+
 <style type="text/css">
-  
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -47,7 +53,10 @@
     box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
 }
- 
+::-webkit-input-placeholder {
+    color: white;
+    font-weight: bold;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: yellowgreen; 
@@ -61,7 +70,8 @@
 </style>
 
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body>
+<div id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <div id="home" class="fs-video-hero">
   <div id="fs-video-one-bg" class="player" 
                data-property="{videoURL:'http://youtu.be/Scxs7L0vhZ4',containment:'.fs-video-hero',autoPlay:true, mute:true, startAt:71, stopAt:300, opacity:1}">
@@ -74,7 +84,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Train Maniac</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">Welcome</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -96,9 +106,9 @@
       <div class="container">
         <div class="row">
           <div class="intro-text">
-            <h1>Rail Track</h1>
-            <p>Always At Your Service </p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Start Exploring</a> </div>
+            <h1>Train Maniac</h1>
+            <p>------Always At Your Service------</p>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Your Train</a> </div>
         </div>
       </div>
     </div>
@@ -115,7 +125,7 @@
         <div class="about-text">
           <h2>History</h2>
           <hr>
-          <p>Indian Railways (IR) is India's national railway system operated by the Ministry of Railways. It manages the fourth-largest railway network in the world by size, with 121,407 kilometres (75,439 mi) of total track over a 67,368-kilometre (41,861 mi) route. Forty nine percent of the routes are electrified with 25 KV AC electric traction while thirty three percent of them are double or multi-tracked.</p>
+          <p>Indian Railways (IR) is India's national railway system operated by the Ministry of Railways. It manages the fourth-largest railway network in the world by size, with 121,407 kilometres (75,439 mi) of total track over a 67,368-kilometre (41,861 mi) route. Forty nine percent of the routes are electrified with 25 KV AC electric traction while thirty three percent of them are double or multi-tracked.<a href="https://en.wikipedia.org/wiki/Indian_Railways" style="color:blue;font-size: 20px;" target="_blank"> <u>Know More in WiKi...</u></a></p>
           <h3>Services</h3>
           <p>From December 2017, stations are categorised into the Non-Suburban Group NSG1 to NSG6, the Suburban Group SG1 to SG3, and the Halt Group HG1 to HG3 based on the earnings, passenger footfall and strategic importance.</p>
         </div>
@@ -130,148 +140,85 @@
       <h2>Railway PNR InQuiry</h2>
       <hr>
 
-      <input type="text" placeholder="PNR Code" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <input id="pnr" type="text" placeholder="PNR Code" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
       <br>
       <br>
       <p>This can be found in your ticket. Also a 10 digit number, which is alloted when u have your ticket.</p>
       <br>
-      <!-- Modal starts -->
-    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success">Open Animated Modal</button>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Modal Header</h2>
-      </header>
-      <div class="w3-container">
-        <p>Some text..</p>
-        <p>Some text..</p>
-      </div>
-      <footer class="w3-container w3-teal">
-        <p>Modal Footer</p>
-      </footer>
-    </div>
-  </div>
-    <!-- Modals ends -->
-    </div>
-    </div>
-  </div>
-  <!-- <div class="container">
-    <h2> Station Search... </h2>
-    <div class="row">
-      <div  class="col-xs-12 col-sm-6">
-        <div class="menu-section hey">
-          <h2 class="menu-section-title">Breakfast & Starters</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Main Course</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Dinner</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $350 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Coffee & Drinks</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+      <button onclick="pnrItNow()" class="btn btn-success">Search</button>
+      <br>
+      <br>
+      <center>
+          <div id="showdata" style="text-align:center;">
+            </div>
+      </center>
+       
   </div>
 </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    var myObj1=[];
+    function pnrItNow(){
+    var xmlhttp = new XMLHttpRequest();
+   xmlhttp.onreadystatechange = function() {
+   if (this.readyState == 4 && this.status == 200) {
+       myObj1 = JSON.parse(this.responseText);
+       myTable1(myObj1);
+       
+    }
+  };
+    xmlhttp.open("GET", `https://api.railwayapi.com/v2/pnr-status/pnr/${pnr.value}/apikey/e0ck1buayb/`, true);
+    xmlhttp.send();
+}
+function myTable1(my) {
+        var col = [];
+        for (var i = 0; i < my.passengers.length; i++) {
+            for (var key in my.passengers[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.createElement("table");
+
+        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+        var tr = table.insertRow(-1);                   // TABLE ROW.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+        for (var i = 0; i < my.passengers.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.passengers[i][col[j]];
+            }
+        }
+
+        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+        var divContainer = document.getElementById("showdata");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
+
+  </script>
 <!-- Dispay trains -->
 <style>
+  #showdata
+  {
+    text-align:center;
+    margin-left:375px;
+  }
 div.table-title {
   display: block;
   margin: auto;
@@ -282,7 +229,7 @@ div.table-title {
 
 .table-title h3 {
    color: #fafafa;
-   font-size: 30px;
+   font-size: 20px;
    font-weight: 400;
    font-style:normal;
    font-family: "Roboto", helvetica, arial, sans-serif;
@@ -300,7 +247,7 @@ div.table-title {
   height: 320px;
   margin: auto;
   max-width: 900px;
-  padding:5px;
+  padding:0px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
@@ -311,14 +258,16 @@ th {
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size:23px;
+  font-size:20px;
   font-weight: 100;
   padding:24px;
   text-align:center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   vertical-align:middle;
 }
-
+thead tr {
+    background-color: #8CCCF1;
+}
 th:first-child {
   border-top-left-radius:3px;
 }
@@ -330,7 +279,7 @@ th:last-child {
   
 tr {
   border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
   color:#666B85;
   font-size:16px;
   font-weight:normal;
@@ -382,16 +331,14 @@ td:last-child {
 }
 th.text-left {
   text-align: left;
-  text-color: red; 
+  color: red; 
 }
 th.text-center {
   text-align: center;
 }
-
 th.text-right {
   text-align: right;
 }
-
 td.text-left {
   text-align: left;
 }
@@ -427,200 +374,154 @@ input[type=text]:focus {
       <h2>Trains Between Stations</h2>
       <hr>
       <p>Enter the source from where u want to board the train. The destination will be your last stop.</p>
-      <input type="text" placeholder="Source" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
-  <input type="text" placeholder="Destination" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
-  <br>
-  <br>
-  <input type="date" placeholder="Date" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <input id="src" type="text" placeholder="Source" style="background:transparent;border-radius:0%;color:white;padding: 5px;"><br></br>
+      <input id="dest"type="text" placeholder="Destination" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
       <br>
       <br>
-      <button class="w3 w3-btn btn-warning" onclick="funf()">Click Meeee</button>
-<div id="classModal" class="modal fade bs-example-modal-lg" tabindex="-1"
-    role="dialog" aria-labelledby="classInfo" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-              ×
-            </button>
-            <h4 class="modal-title" id="classModalLabel">
-              Class Info
-            </h4>
-          </div>
-          <div class="modal-body">
-            <table id="classTable" class="table table-bordered">
-              <thead>
-              </thead>
-              <tbody>
-                <tr>
-<td class="text-left">Windows Vista</td>
-<td class="text-center">Não</td>
-<td class="text-center">Não</td>  
-<td class="text-incompativel">Incompatível</td>    
-</tr>
-<tr>
-<td class="text-left">Windows Vista</td>
-<td class="text-center">Não</td>
-<td class="text-center">Não</td>  
-<td class="text-incompativel">Incompatível</td>    
-</tr>
-<tr>
-<td class="text-left">Windows Vista</td>
-<td class="text-center">Não</td>
-<td class="text-center">Não</td>  
-<td class="text-incompativel">Incompatível</td>    
-</tr>
-<tr>
-<td class="text-left">Windows Vista</td>
-<td class="text-center">Não</td>
-<td class="text-center">Não</td>  
-<td class="text-incompativel">Incompatível</td>    
-</tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
+      <input id="date" type="text" placeholder="Date" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <br>
+      <br>
+      <button id="id02" class="w3 w3-btn btn-warning btn-large" onclick="startItNow()"><b>Search Now</b></button>
+
+     <br>
+     <br>
+     <center>
+    <div id="showtrains" style="margin:0;">
+
       </div>
-    </div> 
-    </div>
+    </center>
+    </div>    
   </div>
-  <!-- <div class="container">
-    <div class="row">
-      <div class="categories">
-        <ul class="cat">
-          <li>
-            <ol class="type">
-              <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
-            </ol>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+  
+</div>
+<script type="text/javascript">
+var myObj=[];
+  function startItNow(){
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        console.log(myObj);
+        myTable2(myObj);
+    }
+};
+xmlhttp.open("GET", `https://api.railwayapi.com/v2/between/source/${src.value}/dest/${dest.value}/date/${date.value}/apikey/e0ck1buayb/`, true);
+xmlhttp.send();
+
+}
+function myTable2(my) {
+        
+        // EXTRACT VALUE FOR HTML HEADER. 
+        // ('Book ID', 'Book Name', 'Category' and 'Price')
+        var col = [];
+        
+                var key2='name';var key1='number';var key3='from_station';var key4='to_station';var key6='travel_time'; var key5='src_departure_time';
+                if (col.indexOf(key1) === -1) {
+                    col.push(key1);
+                }
+                if (col.indexOf(key2) === -1) {
+                    col.push(key2);
+                }
+                if (col.indexOf(key3) === -1) {
+                    col.push(key3);
+                }
+                if (col.indexOf(key4) === -1) {
+                    col.push(key4);
+                }
+                if (col.indexOf(key5) === -1) {
+                    col.push(key5);
+                }
+                if (col.indexOf(key6) === -1) {
+                    col.push(key6);
+                }
+            
+        
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.createElement("table");
+
+        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+        var tr = table.insertRow(-1);                   // TABLE ROW.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = "check-seat";
+            tr.appendChild(th);
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = "Status";
+            tr.appendChild(th);
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+        for (var i = 0; i < my.trains.length; i++) {
+            tr = table.insertRow(-1);
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].number;
+                tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].name;
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].from_station.name;
+                tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].to_station.name;
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].src_departure_time;
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = my.trains[i].travel_time;
+                var btn = document.createElement("a");
+                var t = document.createTextNode("Availability");
+                var btn2=document.createElement("div");
+                var t2=document.createTextNode("");
+                  btn.appendChild(t);
+                  btn.appendChild(t2);
+                var tabCell = tr.insertCell(-1);
+                  tabCell.appendChild(btn); 
+                  var tabCell = tr.insertCell(-1);
+                  tabCell.appendChild(btn2); 
+                  btn2.setAttribute("id","b"+i);
+                  btn.setAttribute("id","a"+i);
+                  btn.setAttribute("class","btn btn-info");
+                  btn.setAttribute("onclick","seats(" + i +")");
+                 }
+
+        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+        var divContainer = document.getElementById("showtrains");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
+    var myObj2=[];
+    var myob;
+    function seats(id){
+
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj2 = JSON.parse(this.responseText);
+        var divContainer = document.getElementById("b"+id);
+        
+        myob=myObj2.availability[0].status;
+        divContainer.innerHTML = myob;
+        //divContainer.appendChild(myob);
+
+    }
+};
+xmlhttp.open("GET", `https://api.railwayapi.com/v2/check-seat/train/${myObj.trains[id].number}/source/${src.value}/dest/${dest.value}/date/${date.value}/pref/3A/quota/GN/apikey/e0ck1buayb/`, true);
+xmlhttp.send();
+
+}
+
+</script>
 <!-- Team Section -->
 <style>
+  #showtrains 
+  {
+    margin-left:80px;
+  }
     #map{
       height: 500px;
       width:100%;
@@ -634,50 +535,15 @@ input[type=text]:focus {
       <hr style="align-self: center;background:green; ">
       </center>
     <h3> Enter Train number : 
-      <input type="text" placeholder="Enter number" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <input id="num" type="text" placeholder="Enter number" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
         <br>
       <br>
       <h3> Enter Date: 
-  <input type="date" placeholder="Date" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
-      <button class="btn btn-primary">Get status </button>
+  <input type="text" id="dat" placeholder="DD-MM-YYYY" style="background:transparent;border-radius:0%;color:white;padding: 5px;">
+      <button onclick="getStatus()" class="btn btn-primary">Get status </button>
       <br>
       <br>
       <br>
-      <!-- <div class="col-md-10 col-md-offset-1 section-title"> -->
-        <!-- <h2></h2> -->
-        <!-- <hr> -->
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p> -->
-      <!-- </div> -->
-      <!-- <div id="row">
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/01.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Mike Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Chris Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Ethan Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div id="map">
       hello
     </div>
@@ -688,89 +554,20 @@ input[type=text]:focus {
 <!-- Call Reservation Section -->
 <div id="call-reservation" class="text-center">
   <div class="container">
-    <h2>Want to make a reservation? Call <strong>1-887-654-3210</strong></h2>
+    <h2>Want to make a reservation? Call@ <strong>+91 7209056068/8127280273</strong></h2>
   </div>
 </div>
-<!-- Contact Section -->
-<!-- <div id="contact" class="text-center">
-  <div class="container">
-    <div class="section-title text-center">
-      <h2>Contact Form</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
-    </div>
-    <div class="col-md-10 col-md-offset-1">
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-      </form>
-    </div>
-  </div>
-</div> -->
-<!-- <div id="footer">
-  <div class="container text-center">
-    <div class="col-md-4">
-      <h3>Address</h3>
-      <div class="contact-item">
-        <p>4321 California St,</p>
-        <p>San Francisco, CA 12345</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <h3>Opening Hours</h3>
-      <div class="contact-item">
-        <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-        <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <h3>Contact Info</h3>
-      <div class="contact-item">
-        <p>Phone: +1 123 456 1234</p>
-        <p>Email: info@company.com</p>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid text-center copyrights">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="social">
-        <ul>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        </ul>
-      </div>
-      <p>&copy; 2016 Touché. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
-    </div>
-  </div>
-</div> -->
+
 <style type="text/css">
 .last{
-  height:10px;
+  height:30px;
   }
   .footer-note {
     margin: auto;
     /*width: 500px;*/
     border-top: 1px solid #CACACA;
-    padding-top: 30px;
+    padding-top: 10px;
+    padding-bottom:10px; 
     text-align: center;
   }
 </style>
@@ -782,7 +579,7 @@ input[type=text]:focus {
       Designed and built with <i class="fa fa-heart faa-pulse animated"></i> by &copy; Team SHA:{508}</a>
       </div>
     </div>
-  </footer>
+  </div>
   <!--- Footer Ends Here ---->
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
@@ -793,26 +590,46 @@ input[type=text]:focus {
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
 <script>
-  // Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-function funf(){
-  $('#classModal').modal('show')
-}
 
 // Rashi code 
 // Initialize and add the map
 var uluru = {lat: 28.6315, lng: 77.2167};
+var myObj = [];
+       var lati;
+       var longi;
+       function getStatus() {
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function () {
+           if (this.readyState == 4 && this.status == 200) {
+             myObj = JSON.parse(this.responseText);
+             lati = myObj.current_station.lat;
+             longi = myObj.current_station.lng;
+             uluru.lat = lati;
+             uluru.lng = longi;
+             initMap1();
+           }
+         };
+         xmlhttp.open("GET", `https://api.railwayapi.com/v2/live/train/${num.value}/date/${dat.value}/apikey/rtwl5bri8j/`, true);
+         xmlhttp.send();
+       }
+       function initMap1() {
+         var myLatLng = { lat: uluru.lat, lng: uluru.lng };
+
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 14,
+           // type: terrain,
+           center: myLatLng
+         });
+
+         var marker = new google.maps.Marker({
+           position: myLatLng,
+           map: map,
+           // title: 'Hello World!'
+         });
+         marker.setAnimation(google.maps.Animation.BOUNCE);
+
+       }
 function initMap() {
-  // The location of Uluru
-  //var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 10, center: uluru});
   // The marker, positioned at Uluru
@@ -834,5 +651,6 @@ navigator.geolocation.getCurrentPosition(success, error) ;
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOdGyn1yjT9B6v85YX9RqyZCzNKdOkR4U&callback=initMap"
   type="text/javascript"></script>
+ 
 </body>
 </html>
