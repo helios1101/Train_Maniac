@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Train Maniac</title>
-<meta name="description" content="Railway Search ApI">
-<meta name="author" content="SHA:{508}">
+<meta name="description" content="Railway Search WEB App">
+<meta name="author" content="SHA:{508}-Ayushi,Shubham,Harshit">
 <link rel="icon" type="image/png" href="img/download.png">
-
 <!-- Favicons
     ================================================== -->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -38,10 +37,7 @@
     <![endif]-->
     <!-- LOader -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-</script>
     
-
 <style type="text/css">
 /* width */
 ::-webkit-scrollbar {
@@ -168,7 +164,7 @@
        
     }
   };
-    xmlhttp.open("GET", `https://api.railwayapi.com/v2/pnr-status/pnr/${pnr.value}/apikey/e0ck1buayb/`, true);
+    xmlhttp.open("GET", `https://api.railwayapi.com/v2/pnr-status/pnr/${pnr.value}/apikey/{YOUR API KEY}/`, true);
     xmlhttp.send();
 }
 function myTable1(my) {
@@ -407,7 +403,7 @@ var myObj=[];
         myTable2(myObj);
     }
 };
-xmlhttp.open("GET", `https://api.railwayapi.com/v2/between/source/${src.value}/dest/${dest.value}/date/${date.value}/apikey/e0ck1buayb/`, true);
+xmlhttp.open("GET", `https://api.railwayapi.com/v2/between/source/${src.value}/dest/${dest.value}/date/${date.value}/apikey/{YOUR API KEY}/`, true);
 xmlhttp.send();
 
 }
@@ -510,7 +506,7 @@ function myTable2(my) {
 
     }
 };
-xmlhttp.open("GET", `https://api.railwayapi.com/v2/check-seat/train/${myObj.trains[id].number}/source/${src.value}/dest/${dest.value}/date/${date.value}/pref/3A/quota/GN/apikey/e0ck1buayb/`, true);
+xmlhttp.open("GET", `https://api.railwayapi.com/v2/check-seat/train/${myObj.trains[id].number}/source/${src.value}/dest/${dest.value}/date/${date.value}/pref/3A/quota/GN/apikey/{YOUR API KEY}/`, true);
 xmlhttp.send();
 
 }
@@ -609,7 +605,7 @@ var myObj = [];
              initMap1();
            }
          };
-         xmlhttp.open("GET", `https://api.railwayapi.com/v2/live/train/${num.value}/date/${dat.value}/apikey/rtwl5bri8j/`, true);
+         xmlhttp.open("GET", `https://api.railwayapi.com/v2/live/train/${num.value}/date/${dat.value}/apikey/{YOUR API KEY}/`, true);
          xmlhttp.send();
        }
        function initMap1() {
@@ -649,7 +645,7 @@ function success(position) {
   }
 navigator.geolocation.getCurrentPosition(success, error) ;
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOdGyn1yjT9B6v85YX9RqyZCzNKdOkR4U&callback=initMap"
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
   type="text/javascript"></script>
  
 </body>
