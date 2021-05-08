@@ -25,3 +25,5 @@ Alternatively, here's our top most trending and selling items:
 
 
 Contribution - https://themewagon.com/theme_tag/bootstrap-5/
+
+BUG FIX
